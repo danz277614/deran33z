@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+/* Background */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: url("bg.jpg") center/cover no-repeat;
+  filter: blur(3px);
+  animation: zoom 20s infinite alternate;
+}
+
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+
+/* Card */
+.card {
+  position: relative;
+  z-index: 2;
+  max-width: 360px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%) scale(0.95);
+  text-align: center;
+  padding: 25px;
+  animation: fadeIn 1.2s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.bio {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+/* Status */
+.status {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.12);
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.status img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user {
+  font-weight: bold;
+  display: block;
+}
+
+.desc {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Links */
+.links a {
+  display: block;
+  margin: 10px 0;
+  padding: 12px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.links a:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 0 15px white;
+}
